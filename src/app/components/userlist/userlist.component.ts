@@ -59,6 +59,9 @@ export class UserlistComponent implements OnInit {
       this.getAllUsers(this.currentPage);
     } else {
       let id = Number(value);
+      if (id > 12) {
+        this.userList = [];
+      }
       // console.log(id);
       this.userServ.getUserById(id).subscribe({
         next: (res) => {
