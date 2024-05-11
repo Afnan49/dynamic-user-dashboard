@@ -33,7 +33,7 @@
     </div>
   </ng-container>
 </div>
-<div class="pagination">
+<div class="pagination" *ngIf="isVisable">
   <div class="pagination-div">
     <button class="prev-but" (click)="prevPage()">Previous</button>
     <button class="next-but" (click)="nextPage()">Next</button>
